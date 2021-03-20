@@ -1,0 +1,27 @@
+body {
+    background: red;
+}
+
+@mixin media($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@include media(1300px) {
+    body {
+        background: green;
+    }
+}
+
+@include media(1000px) {
+    body {
+        background: blue;
+    }
+}
+
+@include media(700px) {
+    body {
+        background: yellow;
+    }
+}

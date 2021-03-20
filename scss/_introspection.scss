@@ -1,0 +1,45 @@
+$num: 10px;
+$char: "Arial";
+$list: 10px 20px 30px;
+$map: ("regular": 400, "medium": 600, "bold": 700);
+
+@mixin border-radius {
+    border-radius: 5px;
+}
+
+@function add($a, $b) {
+    @return $a + $b;
+}
+
+// INTROSPECTION FUNCTIONS USE WITH IF CONDITION
+
+// VARIABLE-EXISTS FUNCTION
+.variable-exists {
+    padding: variable-exists($name: num); // IF VARIABLE EXIST THEN SHOW TRUE OTHERWISE FALSE
+}
+
+// GLOBAL-VARIABLE-EXISTS FUNCTION
+.global-variable-exists {
+    $num: 10px;
+    padding: global-variable-exists($name: num); // IF VARIABLE EXIST THEN SHOW TRUE OTHERWISE FALSE
+}
+
+// MIXIN-EXISTS FUNCTION
+.mixin-exists {
+    padding: mixin-exists($name: border-radius);
+}
+
+// FUNCTION-EXISTS FUNCTION
+.function-exists {
+    padding: function-exists($name: add);
+}
+
+// TYPE-OF FUNCTION
+.type-of {
+    padding: type-of($value: $list);
+}
+
+// INCPECT FUNCTION
+.inspect {
+    font-family: inspect($value: char);
+}

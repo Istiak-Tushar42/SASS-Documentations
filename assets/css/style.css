@@ -1,0 +1,86 @@
+.show-map-get {
+  font-weight: 700;
+}
+
+.show-map-keys {
+  font-weight: "regular", "medium", "bold", "lightest", "light";
+}
+
+.show-map-values {
+  font-weight: 400, 600, 700, 100, 300;
+}
+
+.map-remove {
+  font-weight: 600, 700;
+}
+
+.map-has-key {
+  font-weight: true;
+}
+
+.list-with-map {
+  font-weight: "medium" 600;
+}
+
+.variable-exists {
+  padding: true;
+}
+
+.global-variable-exists {
+  padding: true;
+}
+
+.mixin-exists {
+  padding: true;
+}
+
+.function-exists {
+  padding: true;
+}
+
+.type-of {
+  padding: list;
+}
+
+.inspect {
+  font-family: char;
+}
+
+.content-directive {
+  border-radius: 5px;
+  border-style: dashed;
+}
+
+#test .block {
+  color: coral;
+}
+
+.button {
+  border: solid 1px #333;
+}
+
+.button:hover {
+  border-width: 2px;
+}
+
+body {
+  background: red;
+}
+
+@media screen and (max-width: 1300px) {
+  body {
+    background: green;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background: blue;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background: yellow;
+  }
+}

@@ -1,0 +1,41 @@
+@mixin bd-radius($value) {
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    -o-border-radius: $value;
+    border-radius: $value;
+
+    // CONTENT-DIRECTIVE FUNCTION
+    @content;
+}
+
+.content-directive {
+    @include bd-radius(5px) {
+        border-style: dashed;
+    };
+}
+
+@mixin test {
+    #test {
+        @content;
+    }
+}
+
+@include test {
+    .block {
+        color: coral;
+    }
+}
+
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+.button {
+    border: solid 1px #333;
+
+    @include hover {
+        border-width: 2px;
+    }
+}

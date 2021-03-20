@@ -1,0 +1,37 @@
+// SASS MAP FUNCTIONS
+// @import 'variables';
+
+// SASS MAP-MERGE FUNCTION
+$merge: map-merge($font-weights, $light-weights);
+$map-remove: map-remove($font-weights, "regular");
+
+// SASS MAP-GET FUNCTION
+.show-map-get {
+    font-weight: map-get($font-weights, "bold");
+}
+
+// SASS MAP-KEYS FUNCTION
+.show-map-keys {
+    font-weight: map-keys($merge);
+}
+
+// SASS MAP-VALUES FUNCTION
+.show-map-values {
+    font-weight: map-values($merge);
+}
+
+// SASS MAP-REMOVE FUNCTION
+.map-remove {
+    font-weight: map-values($map-remove);
+}
+
+// SASS MAP-HAS-KEY FUNCTION
+.map-has-key {
+    font-weight: map-has-key($map: ($font-weights), $key: "regular");
+}
+
+
+// LIST WITH MAP FUNCTION
+.list-with-map {
+    font-weight: nth($font-weights, 2);
+}
