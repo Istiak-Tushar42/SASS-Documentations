@@ -84,3 +84,63 @@ body {
     background: yellow;
   }
 }
+
+/* MEDIA QUERIES */
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 575px;
+  }
+}
+
+/* at-root Directive */
+@media print {
+  .container {
+    font-size: 1rem;
+    color: red;
+  }
+}
+
+.container {
+  font-size: 1.1rem;
+  color: black;
+}
+
+p {
+  color: blue;
+  font-size: 12px;
+  background: sandybrown;
+}
+
+.test-ifelse {
+  font-size: 16px;
+  color: green;
+}
+
+.box {
+  background: ghostwhite;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-size: 400;
+  font-style: normal;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 200px;
+}

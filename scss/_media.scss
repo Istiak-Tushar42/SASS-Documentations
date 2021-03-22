@@ -1,0 +1,31 @@
+/* MEDIA QUERIES */
+.container {
+    width: 1100px;
+    margin: 0 auto;
+
+
+    @media screen and (max-width: 1150px) {
+        width: 960px;
+    }
+
+    @media screen and (max-width: 960px) {
+        width: 768px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 575px;
+    }
+}
+
+/* at-root Directive */
+@media print {
+    .container {
+        font-size: 1rem;
+        color: red;
+
+        @at-root (without: media) {
+            font-size: 1.1rem;
+            color: black;
+        }
+    }
+}
